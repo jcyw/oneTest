@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 Git is a version control system.
 Git is free software.
 add a line
 add a line two
 Creating a new branch is quick and simple.
-=======
 Git is a distributed version control system.
 Git is free software distributed under the GPL.
->>>>>>> 66b6f2db64d146003794dfabdd67c95d7a5ab737
