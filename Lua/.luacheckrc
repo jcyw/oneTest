@@ -1,0 +1,1 @@
+ignore = {"table", "string", "math", "dump"}

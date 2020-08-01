@@ -1,0 +1,178 @@
+LOGIN_EVENT = {}
+LOGIN_EVENT.LogIn = 1 --登入
+LOGIN_EVENT.LogOut = 2 --登出
+LOGIN_EVENT.ReLogIn = 3 --重新登入
+
+TIME_REFRESH_EVENT = {}
+TIME_REFRESH_EVENT.Refresh = "TIME_REFRESH_EVENTRefresh" --跨天刷新事件
+
+MAILEVENTTYPE = {}
+MAILEVENTTYPE.MailDBOpenEvent = "MailDBOpenEvent" --数据库打开
+MAILEVENTTYPE.MAILDBCloseEvent = "MAILDBCloseEvent" --数据库关闭
+MAILEVENTTYPE.MailWriteEvent = "MailWriteEvent" --数据库写入数据
+MAILEVENTTYPE.MailWriteEndEvent = "MailWriteEndEvent" --数据库写入结束
+MAILEVENTTYPE.MailsReadEvent = "MailReadEvent" --邮件读取结束
+MAILEVENTTYPE.MailMsgReadEvent = "MailMsgReadEvent" --个人消息读取结束
+-- MAILEVENTTYPE.MailMsgGroupReadEvent = "MailMsgGroupReadEvent"   --消息组读取结束
+MAILEVENTTYPE.MailStarReadEvent = "MailStarReadEvent" --星标读取结束
+MAILEVENTTYPE.MailNewMsgGroup = "MailNewMsgGroup" --新个人消息组
+MAILEVENTTYPE.MailNewMsg = "MailNewMsg" --新个人消息
+MAILEVENTTYPE.MailGroupChange = "MailGroupChange" --群组改变
+MAILEVENTTYPE.MailGroupDel = "MailGroupDel" --退出群
+MAILEVENTTYPE.MailGroupTopChange = "MailGroupTopChange" --置顶改变
+MAILEVENTTYPE.MailRefresh = "MailRefresh" --刷新邮件
+
+CHAT_GROUP_EVNET = {} --群聊事件
+CHAT_GROUP_EVNET.Add = "CHAT_GROUP_EVNETAdd"
+CHAT_GROUP_EVNET.Del = "CHAT_GROUP_EVNETDel"
+
+WORLD_CHAT_EVENT = {} --世界聊天时间
+WORLD_CHAT_EVENT.Normal = "WORLD_CHAT_EVENTNormal" --普通
+WORLD_CHAT_EVENT.RedPacket = "WORLD_CHAT_EVENTRedPacket" --红包
+WORLD_CHAT_EVENT.Radio = "WORLD_CHAT_EVENTRadio" --广播
+WORLD_CHAT_EVENT.Refresh = "WORLD_CHAT_EVENTRefresh" --刷新
+WORLD_CHAT_EVENT.BanRefresh = "WORLD_CHAT_EVENTBanRefresh" --拉黑后刷新刷新
+
+TASKACTIVETYPE = {}
+TASKACTIVETYPE.Claim = "TASKACTIVETYPEClaim" --领取联盟活跃任务奖励
+
+CHAT_EVENT_TYPE = {}
+CHAT_EVENT_TYPE.ShowChatBar = "CHAT_EVENT_TYPEShowChatBar"
+CHAT_EVENT_TYPE.CloseChatBar = "CHAT_EVENT_TYPECloseChatBar"
+CHAT_EVENT_TYPE.Refresh = "CHAT_EVENT_TYPERefresh"
+
+SHOPEVENT = {}
+SHOPEVENT.MarkEvent = "MarkEvent" --提醒购买
+SHOPEVENT.BuyEvent = "BuyEvent" --购买
+SHOPEVENT.AddEvent = "AddEvent" --补货
+SHOPEVENT.VipBuyEvent = "BuyEvent" --购买
+SHOPEVENT.Refresh = "Refresh" --购买
+
+
+UNIONVOTEMEMBEREVENT = {} --联盟投票参与成员事件
+UNIONVOTEMEMBEREVENT.Add = "UNIONVOTEMEMBEREVENTADD" --参与成员添加
+UNIONVOTEMEMBEREVENT.Del = "UNIONVOTEMEMBEREVENTDEL" --参与成员去除
+
+UNION_MSG_EVENT = {}
+UNION_MSG_EVENT.Del = "UNION_MSG_EVENTDel"
+
+UNIONVOTECOUNTDOWNEVNET = {} --投票倒计时事件
+UNIONVOTECOUNTDOWNEVNET.Start = "UNIONVOTECOUNTDOWNEVNETStart" --开始
+UNIONVOTECOUNTDOWNEVNET.End = "UNIONVOTECOUNTDOWNEVNETEnd" --结束
+
+UNIONGIFTCOUNTDOWNEVENT = {} --联盟礼物倒计时事件
+UNIONGIFTCOUNTDOWNEVENT.Start = "UNIONGIFTCOUNTDOWNEVENTStart" --开始
+UNIONGIFTCOUNTDOWNEVENT.End = "UNIONGIFTCOUNTDOWNEVENTEnd" --结束
+
+UNIONVOTE = {} --投票
+UNIONVOTE.Add = "UNIONVOTEAdd" --
+UNIONVOTE.Del = "UNIONVOTEDel" --
+UNIONVOTE.Ok = "UNIONVOTEOk" --投票成功
+
+UNION_MSG_BAN = {}
+UNION_MSG_BAN.BanPlayer = "UNIONMSGBANBanPlayer"
+UNION_MSG_BAN.BanAlliance = "UNIONMSGBanBanAlliance"
+
+UNIONVOTERECORDEVENT = {} --投票记录事件
+UNIONVOTERECORDEVENT.AddAll = "UNIONVOTERECORDEVENTADDALL" --选择所有所有
+UNIONVOTERECORDEVENT.DelAll = "UNIONVOTERECORDEVENTDELALL" --删除
+UNIONVOTERECORDEVENT.Add = "UNIONVOTERECORDEVENTADD" --添加
+UNIONVOTERECORDEVENT.Del = "UNIONVOTERECORDEVENTDEL" --删除
+
+UNIONGIFTEVENT = {} --联盟礼物领取事件
+UNIONGIFTEVENT.GetAll = "UNIONGIFTEVENTGETALL" --领取所有
+UNIONGIFTEVENT.Get = "UNIONGIFTEVENTGET" --领取
+
+SPECIAL_SHOP_EVENT = {}
+SPECIAL_SHOP_EVENT.Buy = "SPECIAL_SHOP_EVENTBuy"
+
+HORN_SHOP_EVENT = {}
+HORN_SHOP_EVENT.Buy = "HORN_SHOP_EVENTBuy"
+
+UNION_EVENT = {}
+UNION_EVENT.Exit = "UNION_EVENTExit"
+
+--购买返回事件
+SKUDETAIL_EVENT = {}
+SKUDETAIL_EVENT.Fail = "SKUDETAIL_EVENTFail" --失败
+SKUDETAIL_EVENT.Success = "SKUDETAIL_EVENTSuccess" --成功
+
+ACTIVITY_COUNTDOWN_EVENT = {} --活动中心
+ACTIVITY_COUNTDOWN_EVENT.Start = "ACTIVITY_COUNTDOWN_EVENTStart" --开始
+ACTIVITY_COUNTDOWN_EVENT.End = "ACTIVITY_COUNTDOWN_EVENTEnd" --结束
+ACTIVITY_COUNTDOWN_EVENT.Banner = "ACTIVITY_COUNTDOWN_EVENTBanner"
+
+ACTIVITY_DAY_COUNTDOWN_EVENT = {} --活动中心日历
+ACTIVITY_DAY_COUNTDOWN_EVENT.Start = "ACTIVITY_DAY_COUNTDOWN_EVENTStart" --开始
+ACTIVITY_DAY_COUNTDOWN_EVENT.End = "ACTIVITY_DAY_COUNTDOWN_EVENTEnd" --结束
+
+SYSTEM_SETTING_EVENT = {}
+SYSTEM_SETTING_EVENT.HideTaskLable = "SYSTEM_SETTING_EVENTHideTaskLable"
+SYSTEM_SETTING_EVENT.HideDayGiftTip = "SYSTEM_SETTING_EVENTHideDayGiftTip"
+SYSTEM_SETTING_EVENT.HideOtherAISiege = "SYSTEM_SETTING_EVENTHideOtherAISiege"
+
+BEAUTY_GIRL_EVENT = {}
+BEAUTY_GIRL_EVENT.LeftArrow = "BEAUTY_GIRL_EVENTLeftArrow"
+BEAUTY_GIRL_EVENT.RightArrow = "BEAUTY_GIRL_EVENTRightArrow"
+BEAUTY_GIRL_EVENT.Open = "BEAUTY_GIRL_EVENTOpen"
+BEAUTY_GIRL_EVENT.Close = "BEAUTY_GIRL_EVENTClose"
+BEAUTY_GIRL_EVENT.FavorAdd = "BEAUTY_GIRL_EVENTFavorAdd"
+BEAUTY_GIRL_EVENT.UnlockSkill = "BEAUTY_GIRL_EVENTUnlockSkill"
+BEAUTY_GIRL_EVENT.UnlockCostume = "BEAUTY_GIRL_EVENTUnlockCostume"
+BEAUTY_GIRL_EVENT.FlowerReduce = "BEAUTY_GIRL_EVENTFlowerReduce"
+BEAUTY_GIRL_EVENT.FlowerAdd = "BEAUTY_GIRL_EVENTFlowerAdd"
+BEAUTY_GIRL_EVENT.ChangeChothes = "BEAUTY_GIRL_EVENTChangeChothes"
+BEAUTY_GIRL_EVENT.ChoiceChothes = "BEAUTY_GIRL_EVENTChoiceChothes"
+BEAUTY_GIRL_EVENT.RefreshChoiceTime = "BEAUTY_GIRL_EVENTRefreshChoiceTime"
+BEAUTY_GIRL_EVENT.GameOver = "BEAUTY_GIRL_EVENTGameOver"
+BEAUTY_GIRL_EVENT.GameTableIn = "BEAUTY_GIRL_EVENTGameTableIn"
+
+MAIL_PANEL_STATE_EVENT = {}
+MAIL_PANEL_STATE_EVENT.MailUnionClose = "MAIL_PANEL_STATE_EVENTMailUnionClose"
+
+TURNTABLE_EVENT = {}
+TURNTABLE_EVENT.TimesChange = "TURNTABLE_EVENTTimesChange"
+TURNTABLE_EVENT.RadioChange = "TURNTABLE_EVENTRadioChange"
+
+ARENA_CHALLENGE_EVNET = {}
+ARENA_CHALLENGE_EVNET.RefreshTimes = "ARENA_CHALLENGE_EVNETRefreshTimes"
+ARENA_CHALLENGE_EVNET.WinRefresh = "ARENA_CHALLENGE_EVNETWinRefresh"
+ARENA_CHALLENGE_EVNET.ArenaChallengeEnd = "ARENA_CHALLENGE_EVNETArenaChallengeEnd"
+ARENA_CHALLENGE_EVNET.ArenaEnd = "ARENA_CHALLENGE_EVNETArenaEnd"
+
+ACIIVI_EVENT = {}
+ACIIVI_EVENT.Open = "ACIIVI_EVENT_Open"
+ACIIVI_EVENT.Close = "ACIIVI_EVENT_Close"
+
+DRESSUP_EVENT = {}          --装扮相关事件
+DRESSUP_EVENT.ChoseChange = "DRESSUP_EVENTChoseChange"                  -- 分类选择改变
+DRESSUP_EVENT.SubChoseChange = "DRESSUP_EVENTSubChoseChange"            -- 装扮选择改变
+DRESSUP_EVENT.ChoseBubble = "DRESSUP_EVENTChoseBubble"                  -- 选择气泡
+DRESSUP_EVENT.ChoseAvatar = "DRESSUP_EVENTChoseAvatar"                  -- 选择头像框
+DRESSUP_EVENT.ChoseNameplate = "DRESSUP_EVENTChoseNameplate"            -- 选择铭牌
+
+DRESSUP_EVENT.ChangeDressUp = "DRESSUP_EVENTChangeDressUp"             --切换装扮
+
+DRESSUP_EVENT.Chose = "DRESSUP_EVENTChose"                              --选中装扮
+DRESSUP_EVENT.Close = "DRESSUP_EVENTClose"                              --装扮界面关闭
+
+
+if EventType then
+    return EventType
+end
+
+--事件类型
+EventType = {
+    --建筑相关
+    B_BUILD = Global.EventTypeBuilding, --建筑建筑升级
+    B_TRAIN = Global.EventTypeTrain, --训练
+    B_TECH = Global.EventTypeTech, --科技升级
+    B_CURE = Global.EventTypeCure, --治疗
+    B_DESTROY = Global.EventTypeBuildingDestroy, --建筑移除
+    B_BEASTTECH = Global.EventTypeBeastTech, --巨兽科技升级
+    B_BEASTCURE = Global.EventTypeBeastCure, --巨兽治疗
+    B_EQUIPTRAN = Global.EventTypeEquip, --装备交易
+    B_EQUIPMATERIALMAKE = Global.EventTypeJewel --装备材料生产
+}
+
+return EventType

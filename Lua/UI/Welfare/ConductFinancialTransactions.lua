@@ -1,0 +1,71 @@
+-- --[[
+--     author:{maxiaolong}
+--     time:2019-09-18 15:15:22
+--     function:{理财基金主页面,每次打开都会刷新数据}
+-- ]]
+-- local ConductFinancialTransactions = fgui.extension_class(GComponent)
+-- fgui.register_extension("ui://Welfare/ConductFinancialTransactions", ConductFinancialTransactions)
+-- local investModel = import("Model/InvestActivityModel")
+-- local WelfareModel = import("Model/WelfareModel")
+-- function ConductFinancialTransactions:ctor()
+--     self:SetShow(false)
+--     self._textName = self:GetChild("textName")
+--     self._listView = self:GetChild("liebiao")
+--     self._btnHelp = self:GetChild("btnHelp")
+--     self:AddListener(self._btnHelp.onClick,
+--         function()
+--             local data = {
+--                 title = StringUtil.GetI18n(I18nType.Commmon, "Fund_Tips1"),
+--                 info = StringUtil.GetI18n(I18nType.Commmon, "Fund_Tips2")
+--             }
+--             UIMgr:Open("ConfirmPopupTextCentered", data)
+--         end
+--     )
+
+--     self:AddEvent(
+--         EventDefines.InvestFinishAction,
+--         function(params)
+--              --理财基金为活动id为-1
+--             -- WelfareModel.SetToActivity(-1)
+--             local index = tonumber(params.Category)
+--             local listNum = self._listView.numItems
+--             if listNum == #self.investList and listNum > 0 then
+--                 local item = self._listView:GetChildAt(index - 1)
+--                 if item ~= nil then
+--                     item:SetStatus()
+--                 end
+--             end
+--         end
+--     )
+-- end
+
+-- function ConductFinancialTransactions:OnOpen()
+--     self:SetShow(true)
+--     Net.ChargeActivity.GetInvestStatus(
+--         function(params)
+--             self.paramsData = params
+--             self.investList = investModel:GetInvestList(self.paramsData)
+--             if #self.investList > 0 then
+--                 self._listView.numItems = #self.investList
+--             end
+--         end
+--     )
+--     self:InitEvent()
+-- end
+
+-- function ConductFinancialTransactions:InitEvent()
+--     self._listView.itemRenderer = function(index, item)
+--         if not index then
+--             return
+--         end
+--         local config = self.investList[index + 1]
+--         item:SetData(config, self)
+--     end
+--     self._listView:SetVirtual()
+-- end
+
+-- function ConductFinancialTransactions:SetShow(isShow)
+--     self.visible = isShow
+-- end
+
+-- return ConductFinancialTransactions

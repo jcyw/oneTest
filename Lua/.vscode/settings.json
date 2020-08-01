@@ -1,0 +1,7 @@
+{
+    "Lua.diagnostics.globals": [
+        "totalNumber",
+        "self"
+    ],
+    "editor.snippetSuggestions": "bottom"
+}
